@@ -1,0 +1,40 @@
+[project]
+name = "eagan_mcp"
+version = "0.1.0"
+description = "MCP server for Haken EaganMatrix devices (EM Module first)"
+requires-python = ">=3.11,<3.13"
+license = "MIT"
+dependencies = [
+    "mcp[cli]>=1.2,<2",
+    "mido>=1.3",
+    "python-rtmidi>=1.5",
+]
+
+[project.scripts]
+eagan_mcp = "eagan_mcp.server:main"
+eagan_sniff = "eagan_mcp.sniff:main"
+# Offline catalog rebuild from HAKEN_EDITOR_DIR; writes to its argument, default cwd.
+eagan_catalog = "eagan_mcp.preset_file:main"
+
+# Dev-only. The project's constraint is no new RUNTIME dependencies: this group never
+# reaches the wheel, so an installed eagan_mcp still needs only the three above.
+[dependency-groups]
+dev = [
+    "pytest>=8",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+# RECIPES.md stays at the repo root, where conventions.md:10 puts it and where it is edited
+# by hand after each listening test - but get_recipes must also answer on a wheel install,
+# where PROJECT_DIR is site-packages/ and the root file does not exist. force-include ships
+# the same bytes inside the package instead of duplicating the document.
+# Adding this section does NOT narrow the default package discovery: tests/test_packaging.py
+# asserts the wheel still carries all 23 knowledge documents and all 4 JSON artifacts.
+[tool.hatch.build.targets.wheel.force-include]
+"RECIPES.md" = "eagan_mcp/knowledge/recipes.md"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

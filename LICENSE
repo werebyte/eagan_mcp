@@ -1,0 +1,66 @@
+MIT License
+
+Copyright (c) 2026 Karol Celinski
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+--------------------------------------------------------------------------
+
+Third-party material: two carve-outs
+
+The MIT grant above covers this project's own source. It does not and cannot
+cover the two bodies of third-party material below. Both are recorded here so
+that the limits are visible before anything is ported or published.
+
+Carve-out 1 -- cohem's documentation is not MIT.
+
+  The cohem repository (Paul Chase Dempsey) is the source of the preset-file
+  knowledge used by this project. Its README states, verbatim:
+
+      "This repo is nominally MIT-licensed."
+      "All graphics and documentation are Copyright (c) Paul Chase Dempsey."
+
+  (ref/cohem/README.md:59 and :64.) The plain-copyright sentence covers
+  cohem's Notes.md, which is documentation and therefore outside the MIT
+  grant. This project may use the facts Notes.md records -- wire formats,
+  message ids, observed behaviour -- but never its prose: no sentence,
+  paragraph, table caption or phrasing is copied from it.
+
+  Where cohem's MIT-licensed code is ported into this project, the MIT notice
+  and the attribution to Paul Chase Dempsey (full legal name) are carried at
+  the ported code itself, not only in this file. MIT-to-MIT is compatible.
+
+Carve-out 2 -- docs/HakenMidi.h is Lippold Haken's copyright
+in all three copies: fine privately, a blocker if this repo is ever published.
+
+  The protocol header is the source of truth for every wire format in this
+  project and is not this project's to license. The copies present on this
+  machine carry the same notice on line 1:
+
+      "// Haken Audio Midi Protocol by Lippold Haken, (C) Copyright 1999-2026."
+
+  The three copies are docs/HakenMidi.h (extracted from the Haken Editor
+  install), ref/cohem/include/HakenMidi.h and
+  ref/pachde-CHEM/src/em/HakenMidi.h. The header is redistributed by this
+  project under no licence at all.
+
+  Consequence: keeping these copies for private use is fine; shipping them, or
+  publishing this repository with them in it, is a blocker and needs Lippold
+  Haken's permission first. .gitignore already excludes docs/ and ref/, which
+  keeps the copies untracked but does not resolve the question.
