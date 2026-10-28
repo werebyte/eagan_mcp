@@ -1,0 +1,341 @@
+{
+ "slot": 1,
+ "name": "Sitar Mute Pluck",
+ "firmware": "10.81",
+ "cells": [
+  {
+   "row": 0,
+   "col": 24,
+   "value": "A",
+   "muted": false,
+   "row_name": "Noise",
+   "col_name": "Osc/Filter 5 input (audio in / phase)"
+  },
+  {
+   "row": 3,
+   "col": 21,
+   "value": "1",
+   "muted": false,
+   "row_name": "Osc 3",
+   "col_name": "Osc/Filter 4 input (audio in / phase)"
+  },
+  {
+   "row": 4,
+   "col": 0,
+   "value": "I",
+   "muted": false,
+   "row_name": "Osc 4",
+   "col_name": "Master SL"
+  },
+  {
+   "row": 4,
+   "col": 1,
+   "value": "I",
+   "muted": false,
+   "row_name": "Osc 4",
+   "col_name": "Master SR"
+  },
+  {
+   "row": 4,
+   "col": 43,
+   "value": "J",
+   "muted": false,
+   "row_name": "Osc 4",
+   "col_name": "Bank C col 1 (VoiceDelay)"
+  },
+  {
+   "row": 5,
+   "col": 43,
+   "value": "1",
+   "muted": false,
+   "row_name": "Osc 5",
+   "col_name": "Bank C col 1 (VoiceDelay)"
+  },
+  {
+   "row": 8,
+   "col": 18,
+   "value": "1",
+   "muted": false,
+   "row_name": "Bank C",
+   "col_name": "Osc/Filter 3 input (audio in / phase)"
+  },
+  {
+   "row": 13,
+   "col": 51,
+   "value": "F",
+   "muted": false,
+   "row_name": "Direct +",
+   "col_name": "SG 1 F (Hz) / P (phase)"
+  },
+  {
+   "row": 13,
+   "col": 52,
+   "value": "W",
+   "muted": false,
+   "row_name": "Direct +",
+   "col_name": "SG 1 T (trigger) / F2 (dual)"
+  },
+  {
+   "row": 13,
+   "col": 44,
+   "value": "B",
+   "muted": false,
+   "row_name": "Direct +",
+   "col_name": "Bank C col 2 (VoiceDelay)"
+  },
+  {
+   "row": 13,
+   "col": 22,
+   "value": "C",
+   "muted": false,
+   "row_name": "Direct +",
+   "col_name": "Osc/Filter 4 F (freq, kHz)"
+  },
+  {
+   "row": 13,
+   "col": 25,
+   "value": "E",
+   "muted": false,
+   "row_name": "Direct +",
+   "col_name": "Osc/Filter 5 F (freq, kHz)"
+  },
+  {
+   "row": 13,
+   "col": 26,
+   "value": "1",
+   "muted": false,
+   "row_name": "Direct +",
+   "col_name": "Osc/Filter 5 B/S (bandwidth or spectral balance)"
+  },
+  {
+   "row": 13,
+   "col": 19,
+   "value": ".0001",
+   "muted": false,
+   "row_name": "Direct +",
+   "col_name": "Osc/Filter 3 F (freq, kHz)"
+  },
+  {
+   "row": 16,
+   "col": 18,
+   "value": "G",
+   "muted": false,
+   "row_name": "Direct x (multiply)",
+   "col_name": "Osc/Filter 3 input (audio in / phase)"
+  },
+  {
+   "row": 16,
+   "col": 22,
+   "value": "K",
+   "muted": false,
+   "row_name": "Direct x (multiply)",
+   "col_name": "Osc/Filter 4 F (freq, kHz)"
+  },
+  {
+   "row": 16,
+   "col": 25,
+   "value": "K",
+   "muted": false,
+   "row_name": "Direct x (multiply)",
+   "col_name": "Osc/Filter 5 F (freq, kHz)"
+  }
+ ],
+ "setup": {
+  "polyphony": {
+   "base": 8,
+   "expanded_plus": true,
+   "double_computation_rate": false
+  },
+  "bend_range": "96 (all channels)",
+  "master_columns": {
+   "2": "Conv 1 Interp",
+   "3": "Conv 1 Mix",
+   "4": "Recirc R4",
+   "5": "Recirc Mix",
+   "6": "Conv 2 Interp",
+   "7": "Conv 2 Mix"
+  },
+  "oscillators": [
+   {
+    "slot": 1,
+    "type": "Integrated DSF",
+    "cascade_raw": 0,
+    "option": 0,
+    "extreme_rate": false
+   },
+   {
+    "slot": 2,
+    "type": "DSF Oscillator",
+    "cascade_raw": 0,
+    "option": 0,
+    "extreme_rate": false
+   },
+   {
+    "slot": 3,
+    "type": "Single Pole High Pass",
+    "cascade_raw": 0,
+    "option": "no cascade",
+    "extreme_rate": false
+   },
+   {
+    "slot": 4,
+    "type": "Single Pole Low Pass",
+    "cascade_raw": 3,
+    "option": "cascade 4",
+    "extreme_rate": false
+   },
+   {
+    "slot": 5,
+    "type": "Low Pass Filter",
+    "cascade_raw": 3,
+    "option": "cascade 4",
+    "extreme_rate": false
+   }
+  ],
+  "banks": {
+   "A": "BiqBank",
+   "B": "BiqBank",
+   "C": "VoiceDelay"
+  },
+  "bank_params": {
+   "A": {
+    "param_raw": 0,
+    "param": "deflate 0",
+    "column_mode_1_raw": 0,
+    "column_mode_2_raw": 0,
+    "biquad_size_raw": 0,
+    "spectral_set_raw": 0,
+    "spectral_set": "Live"
+   },
+   "B": {
+    "param_raw": 0,
+    "param": "deflate 0",
+    "column_mode_1_raw": 0,
+    "column_mode_2_raw": 0,
+    "biquad_size_raw": 0,
+    "spectral_set_raw": 0,
+    "spectral_set": "Live"
+   }
+  },
+  "shape_generators": [
+   {
+    "sg": 1,
+    "type": "Single Cycle"
+   },
+   {
+    "sg": 2,
+    "type": "Continuous Cycle"
+   },
+   {
+    "sg": 3,
+    "type": "Continuous Cycle"
+   },
+   {
+    "sg": 4,
+    "type": "Continuous Cycle"
+   },
+   {
+    "sg": 5,
+    "type": "Continuous Cycle"
+   }
+  ],
+  "recirculator": "Short Reverb",
+  "row_types": {
+   "audio_rows_9_10": "Audio L/R",
+   "submix_rows_11_12": "Submix L/R"
+  },
+  "delay_time_select_raw": 0
+ },
+ "formulas": {
+  "A": {
+   "at": [
+    0,
+    24
+   ],
+   "summary": "[W x (X + Y + Z)] W = SG1 0.25 x 10 [shape Pulse] ; Z = Continuous 0.12->1.0 x 1",
+   "decoded": "A"
+  },
+  "B": {
+   "at": [
+    13,
+    44
+   ],
+   "summary": "[W x (X + Y + Z)] W = Constant 0.8 x 1 ; X = Continuous 0.0->1.0 x 1",
+   "decoded": "B"
+  },
+  "C": {
+   "at": [
+    13,
+    22
+   ],
+   "summary": "[W x (X + Y + Z)] W = Constant 0.3 x 100 ; X = Continuous -1.0->1.0 x 1",
+   "decoded": "C"
+  },
+  "E": {
+   "at": [
+    13,
+    25
+   ],
+   "summary": "[W + X + Y + Z] W = Constant 1.0 x 10",
+   "decoded": "E"
+  },
+  "F": {
+   "at": [
+    13,
+    51
+   ],
+   "summary": "[W + X + Y + Z] W = Constant 0.5 x 100",
+   "decoded": "F"
+  },
+  "G": {
+   "at": [
+    16,
+    18
+   ],
+   "summary": "[W + X + Y + Z] W = Constant 1.0 x 1 ; Z = Continuous 0.0->0.2 x 0.01",
+   "decoded": "G"
+  },
+  "I": {
+   "at": [
+    4,
+    0
+   ],
+   "summary": "[W x (X + Y + Z)] W = Constant 0.2 x 10 ; Z = Continuous 0.6->0.6 x 1",
+   "decoded": "I"
+  },
+  "J": {
+   "at": [
+    4,
+    43
+   ],
+   "summary": "[W + X + Y + Z] W = Constant -0.88 x 1 x Macro (i) ; Y = Continuous 1.0->0.88 x 1",
+   "decoded": "J"
+  },
+  "K": {
+   "at": [
+    16,
+    22
+   ],
+   "summary": "[W + X + Y + Z] W = Constant -0.55 x 1 x Macro (i) ; Y = Continuous 1.0->0.55 x 1",
+   "decoded": "K"
+  },
+  "W": {
+   "at": [
+    13,
+    52
+   ],
+   "summary": null,
+   "decoded": null
+  }
+ },
+ "macros_ch1_cc12_17": {
+  "12": 0,
+  "13": 0,
+  "14": 0,
+  "15": 0,
+  "16": 0,
+  "17": 0
+ },
+ "raw_message_count": 1116,
+ "macros_note": "ch1 cc12-17 as the matRefresh dump reported them AT CAPTURE TIME. These are LIVE values: an external controller on the macro CCs can move them, and a macro position was NOT observed to survive a power cycle. Treat as indicative, not as the stored patch value."
+}

@@ -1,0 +1,453 @@
+{
+ "slot": 4,
+ "name": "Sitar Modal Pluck",
+ "firmware": "10.81",
+ "cells": [
+  {
+   "row": 0,
+   "col": 24,
+   "value": "A",
+   "muted": false,
+   "row_name": "Noise",
+   "col_name": "Osc/Filter 5 input (audio in / phase)"
+  },
+  {
+   "row": 1,
+   "col": 0,
+   "value": "P",
+   "muted": false,
+   "row_name": "Osc 1",
+   "col_name": "Master SL"
+  },
+  {
+   "row": 1,
+   "col": 1,
+   "value": "P",
+   "muted": false,
+   "row_name": "Osc 1",
+   "col_name": "Master SR"
+  },
+  {
+   "row": 1,
+   "col": 27,
+   "value": "M",
+   "muted": false,
+   "row_name": "Osc 1",
+   "col_name": "Bank A col 1 (BiqBank)"
+  },
+  {
+   "row": 2,
+   "col": 13,
+   "value": "L",
+   "muted": false,
+   "row_name": "Osc 2",
+   "col_name": "Osc/Filter 1 F (freq, kHz)"
+  },
+  {
+   "row": 5,
+   "col": 27,
+   "value": ".1",
+   "muted": false,
+   "row_name": "Osc 5",
+   "col_name": "Bank A col 1 (BiqBank)"
+  },
+  {
+   "row": 6,
+   "col": 0,
+   "value": "I",
+   "muted": false,
+   "row_name": "Bank A",
+   "col_name": "Master SL"
+  },
+  {
+   "row": 6,
+   "col": 1,
+   "value": "I",
+   "muted": false,
+   "row_name": "Bank A",
+   "col_name": "Master SR"
+  },
+  {
+   "row": 13,
+   "col": 51,
+   "value": "F",
+   "muted": false,
+   "row_name": "Direct +",
+   "col_name": "SG 1 F (Hz) / P (phase)"
+  },
+  {
+   "row": 13,
+   "col": 52,
+   "value": "W",
+   "muted": false,
+   "row_name": "Direct +",
+   "col_name": "SG 1 T (trigger) / F2 (dual)"
+  },
+  {
+   "row": 13,
+   "col": 25,
+   "value": "E",
+   "muted": false,
+   "row_name": "Direct +",
+   "col_name": "Osc/Filter 5 F (freq, kHz)"
+  },
+  {
+   "row": 13,
+   "col": 26,
+   "value": "1",
+   "muted": false,
+   "row_name": "Direct +",
+   "col_name": "Osc/Filter 5 B/S (bandwidth or spectral balance)"
+  },
+  {
+   "row": 13,
+   "col": 13,
+   "value": "X",
+   "muted": false,
+   "row_name": "Direct +",
+   "col_name": "Osc/Filter 1 F (freq, kHz)"
+  },
+  {
+   "row": 13,
+   "col": 16,
+   "value": "X",
+   "muted": false,
+   "row_name": "Direct +",
+   "col_name": "Osc/Filter 2 F (freq, kHz)"
+  },
+  {
+   "row": 13,
+   "col": 53,
+   "value": "R",
+   "muted": false,
+   "row_name": "Direct +",
+   "col_name": "SG 2 F (Hz) / P (phase)"
+  },
+  {
+   "row": 13,
+   "col": 54,
+   "value": "W",
+   "muted": false,
+   "row_name": "Direct +",
+   "col_name": "SG 2 T (trigger) / F2 (dual)"
+  },
+  {
+   "row": 13,
+   "col": 17,
+   "value": "O",
+   "muted": false,
+   "row_name": "Direct +",
+   "col_name": "Osc/Filter 2 B/S (bandwidth or spectral balance)"
+  },
+  {
+   "row": 13,
+   "col": 56,
+   "value": "W",
+   "muted": false,
+   "row_name": "Direct +",
+   "col_name": "SG 3 T (trigger) / F2 (dual)"
+  },
+  {
+   "row": 13,
+   "col": 55,
+   "value": "Q",
+   "muted": false,
+   "row_name": "Direct +",
+   "col_name": "SG 3 F (Hz) / P (phase)"
+  },
+  {
+   "row": 13,
+   "col": 28,
+   "value": "X",
+   "muted": false,
+   "row_name": "Direct +",
+   "col_name": "Bank A col 2 (BiqBank)"
+  },
+  {
+   "row": 13,
+   "col": 29,
+   "value": "1",
+   "muted": false,
+   "row_name": "Direct +",
+   "col_name": "Bank A col 3 (BiqBank)"
+  },
+  {
+   "row": 13,
+   "col": 30,
+   "value": "T",
+   "muted": false,
+   "row_name": "Direct +",
+   "col_name": "Bank A col 4 (BiqBank)"
+  },
+  {
+   "row": 13,
+   "col": 31,
+   "value": "U",
+   "muted": false,
+   "row_name": "Direct +",
+   "col_name": "Bank A col 5 (BiqBank)"
+  },
+  {
+   "row": 16,
+   "col": 25,
+   "value": "K",
+   "muted": false,
+   "row_name": "Direct x (multiply)",
+   "col_name": "Osc/Filter 5 F (freq, kHz)"
+  },
+  {
+   "row": 16,
+   "col": 24,
+   "value": "N",
+   "muted": false,
+   "row_name": "Direct x (multiply)",
+   "col_name": "Osc/Filter 5 input (audio in / phase)"
+  }
+ ],
+ "setup": {
+  "polyphony": {
+   "base": 7,
+   "expanded_plus": true,
+   "double_computation_rate": false
+  },
+  "bend_range": "96:2",
+  "master_columns": {
+   "2": "Conv 1 Interp",
+   "3": "Conv 1 Mix",
+   "4": "Recirc R4",
+   "5": "Recirc Mix",
+   "6": "Conv 2 Interp",
+   "7": "Conv 2 Mix"
+  },
+  "oscillators": [
+   {
+    "slot": 1,
+    "type": "DSF Oscillator",
+    "cascade_raw": 0,
+    "option": 0,
+    "extreme_rate": false
+   },
+   {
+    "slot": 2,
+    "type": "DSF Oscillator",
+    "cascade_raw": 0,
+    "option": 0,
+    "extreme_rate": false
+   },
+   {
+    "slot": 3,
+    "type": "Single Pole High Pass",
+    "cascade_raw": 0,
+    "option": "no cascade",
+    "extreme_rate": false
+   },
+   {
+    "slot": 4,
+    "type": "Single Pole Low Pass",
+    "cascade_raw": 3,
+    "option": "cascade 4",
+    "extreme_rate": false
+   },
+   {
+    "slot": 5,
+    "type": "Low Pass Filter",
+    "cascade_raw": 3,
+    "option": "cascade 4",
+    "extreme_rate": false
+   }
+  ],
+  "banks": {
+   "A": "BiqBank",
+   "B": "BiqBank",
+   "C": "VoiceDelay"
+  },
+  "bank_params": {
+   "A": {
+    "param_raw": 0,
+    "param": "deflate 0",
+    "column_mode_1_raw": 0,
+    "column_mode_2_raw": 0,
+    "biquad_size_raw": 0,
+    "spectral_set_raw": 0,
+    "spectral_set": "Live"
+   },
+   "B": {
+    "param_raw": 0,
+    "param": "deflate 0",
+    "column_mode_1_raw": 0,
+    "column_mode_2_raw": 0,
+    "biquad_size_raw": 0,
+    "spectral_set_raw": 0,
+    "spectral_set": "Live"
+   }
+  },
+  "shape_generators": [
+   {
+    "sg": 1,
+    "type": "Single Cycle"
+   },
+   {
+    "sg": 2,
+    "type": "Single Cycle"
+   },
+   {
+    "sg": 3,
+    "type": "Single Cycle"
+   },
+   {
+    "sg": 4,
+    "type": "Continuous Cycle"
+   },
+   {
+    "sg": 5,
+    "type": "Continuous Cycle"
+   }
+  ],
+  "recirculator": "Short Reverb",
+  "row_types": {
+   "audio_rows_9_10": "Audio L/R",
+   "submix_rows_11_12": "Submix L/R"
+  },
+  "delay_time_select_raw": 0
+ },
+ "formulas": {
+  "A": {
+   "at": [
+    0,
+    24
+   ],
+   "summary": "[W x (X + Y + Z)] W = SG1 0.25 x 10 [shape Pulse] ; Z = Continuous 0.12->1.0 x 1",
+   "decoded": "A"
+  },
+  "E": {
+   "at": [
+    13,
+    25
+   ],
+   "summary": "[W + X + Y + Z] W = Constant 1.0 x 10",
+   "decoded": "E"
+  },
+  "F": {
+   "at": [
+    13,
+    51
+   ],
+   "summary": "[W x (X + Y + Z)] W = Constant 0.25 x 1000 ; X = Continuous 0.0->1.0 x 1",
+   "decoded": "F"
+  },
+  "I": {
+   "at": [
+    6,
+    0
+   ],
+   "summary": "[W x (X + Y + Z)] W = Constant 0.2 x 10 ; X = Continuous 0.6->0.6 x 1 ; Y = Continuous 0.0->0.6 x 1 ; Z = Continuous 0.6->0.6 x 1",
+   "decoded": "I"
+  },
+  "K": {
+   "at": [
+    16,
+    25
+   ],
+   "summary": "[W + X + Y + Z] W = Constant -0.55 x 1 x Macro (i) ; Y = Continuous 1.0->0.55 x 1",
+   "decoded": "K"
+  },
+  "L": {
+   "at": [
+    2,
+    13
+   ],
+   "summary": "[W + X + Y + Z] W = SG2 0.8 x 1 [shape Ramp Down]",
+   "decoded": "L"
+  },
+  "M": {
+   "at": [
+    1,
+    27
+   ],
+   "summary": "[W x (X + Y + Z)] W = SG2 0.05 x 1 [shape Ramp Down] x Macro (ii) ; Z = Continuous 0.12->1.0 x 1",
+   "decoded": "M"
+  },
+  "N": {
+   "at": [
+    16,
+    24
+   ],
+   "summary": "[W + X + Y + Z] W = Constant -0.2 x 1 x Macro (ii) ; Z = Continuous 1.0->1.0 x 1",
+   "decoded": "N"
+  },
+  "O": {
+   "at": [
+    13,
+    17
+   ],
+   "summary": "[W + X + Y + Z] W = Constant 0.8 x 1 x Macro (iii)",
+   "decoded": "O"
+  },
+  "P": {
+   "at": [
+    1,
+    0
+   ],
+   "summary": "[W x (X + Y + Z)] W = SG3 0.5 x 1 [shape Steep Down] x Macro (iv) ; Z = Initial 0.12->1.0 x 1",
+   "decoded": "P"
+  },
+  "Q": {
+   "at": [
+    13,
+    55
+   ],
+   "summary": "[W + X + Y + Z] W = Constant 0.36 x 10 x Macro (i) ; Y = Continuous 0.04->0.4 x 10",
+   "decoded": "Q"
+  },
+  "R": {
+   "at": [
+    13,
+    53
+   ],
+   "summary": "[W x (X + Y + Z)] W = Constant 0.25 x 100 ; X = Continuous 0.0->1.0 x 1",
+   "decoded": "R"
+  },
+  "T": {
+   "at": [
+    13,
+    30
+   ],
+   "summary": "[W + X + Y + Z] W = Constant 0.4 x 1 x Macro (i) ; Y = Continuous 0.02->0.42 x 1",
+   "decoded": "T"
+  },
+  "U": {
+   "at": [
+    13,
+    31
+   ],
+   "summary": "[W + X + Y + Z] W = Constant 0.5 x 1 x Macro (i) ; Y = Continuous 0.3->0.8 x 1",
+   "decoded": "U"
+  },
+  "W": {
+   "at": [
+    13,
+    52
+   ],
+   "summary": null,
+   "decoded": null
+  },
+  "X": {
+   "at": [
+    13,
+    13
+   ],
+   "summary": null,
+   "decoded": null
+  }
+ },
+ "macros_ch1_cc12_17": {
+  "12": 0,
+  "13": 0,
+  "14": 9,
+  "15": 0,
+  "16": 0,
+  "17": 0
+ },
+ "raw_message_count": 1180,
+ "macros_note": "ch1 cc12-17 as the matRefresh dump reported them AT CAPTURE TIME. These are LIVE values: an external controller on the macro CCs can move them, and a macro position was NOT observed to survive a power cycle. Treat as indicative, not as the stored patch value."
+}

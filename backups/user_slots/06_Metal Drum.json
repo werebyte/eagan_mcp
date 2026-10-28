@@ -1,0 +1,325 @@
+{
+ "slot": 6,
+ "name": "Metal Drum",
+ "firmware": "10.81",
+ "cells": [
+  {
+   "row": 0,
+   "col": 27,
+   "value": "A",
+   "muted": false,
+   "row_name": "Noise",
+   "col_name": "Bank A col 1 (BiqBank)"
+  },
+  {
+   "row": 6,
+   "col": 1,
+   "value": "E",
+   "muted": false,
+   "row_name": "Bank A",
+   "col_name": "Master SR"
+  },
+  {
+   "row": 6,
+   "col": 0,
+   "value": "E",
+   "muted": false,
+   "row_name": "Bank A",
+   "col_name": "Master SL"
+  },
+  {
+   "row": 13,
+   "col": 28,
+   "value": "X",
+   "muted": false,
+   "row_name": "Direct +",
+   "col_name": "Bank A col 2 (BiqBank)"
+  },
+  {
+   "row": 13,
+   "col": 51,
+   "value": "9",
+   "muted": false,
+   "row_name": "Direct +",
+   "col_name": "SG 1 F (Hz) / P (phase)"
+  },
+  {
+   "row": 13,
+   "col": 52,
+   "value": "W",
+   "muted": false,
+   "row_name": "Direct +",
+   "col_name": "SG 1 T (trigger) / F2 (dual)"
+  },
+  {
+   "row": 13,
+   "col": 29,
+   "value": "H",
+   "muted": false,
+   "row_name": "Direct +",
+   "col_name": "Bank A col 3 (BiqBank)"
+  },
+  {
+   "row": 13,
+   "col": 30,
+   "value": "F",
+   "muted": false,
+   "row_name": "Direct +",
+   "col_name": "Bank A col 4 (BiqBank)"
+  },
+  {
+   "row": 13,
+   "col": 53,
+   "value": "G",
+   "muted": false,
+   "row_name": "Direct +",
+   "col_name": "SG 2 F (Hz) / P (phase)"
+  },
+  {
+   "row": 13,
+   "col": 54,
+   "value": "W",
+   "muted": false,
+   "row_name": "Direct +",
+   "col_name": "SG 2 T (trigger) / F2 (dual)"
+  },
+  {
+   "row": 13,
+   "col": 32,
+   "value": "C",
+   "muted": false,
+   "row_name": "Direct +",
+   "col_name": "Bank A col 6 (BiqBank)"
+  },
+  {
+   "row": 13,
+   "col": 31,
+   "value": ".8",
+   "muted": false,
+   "row_name": "Direct +",
+   "col_name": "Bank A col 5 (BiqBank)"
+  },
+  {
+   "row": 13,
+   "col": 55,
+   "value": "D",
+   "muted": false,
+   "row_name": "Direct +",
+   "col_name": "SG 3 F (Hz) / P (phase)"
+  },
+  {
+   "row": 13,
+   "col": 56,
+   "value": "W",
+   "muted": false,
+   "row_name": "Direct +",
+   "col_name": "SG 3 T (trigger) / F2 (dual)"
+  },
+  {
+   "row": 13,
+   "col": 33,
+   "value": ".1",
+   "muted": false,
+   "row_name": "Direct +",
+   "col_name": "Bank A col 7 (BiqBank)"
+  },
+  {
+   "row": 16,
+   "col": 51,
+   "value": "9",
+   "muted": false,
+   "row_name": "Direct x (multiply)",
+   "col_name": "SG 1 F (Hz) / P (phase)"
+  }
+ ],
+ "setup": {
+  "polyphony": {
+   "base": 8,
+   "expanded_plus": true,
+   "double_computation_rate": false
+  },
+  "bend_range": "96 (all channels)",
+  "master_columns": {
+   "2": "Conv 1 Interp",
+   "3": "Conv 1 Mix",
+   "4": "Recirc R4",
+   "5": "Recirc Mix",
+   "6": "Conv 2 Interp",
+   "7": "Conv 2 Mix"
+  },
+  "oscillators": [
+   {
+    "slot": 1,
+    "type": "DSF Oscillator",
+    "cascade_raw": 0,
+    "option": 0,
+    "extreme_rate": false
+   },
+   {
+    "slot": 2,
+    "type": "DSF Oscillator",
+    "cascade_raw": 0,
+    "option": 0,
+    "extreme_rate": false
+   },
+   {
+    "slot": 3,
+    "type": "DSF Oscillator",
+    "cascade_raw": 0,
+    "option": 0,
+    "extreme_rate": false
+   },
+   {
+    "slot": 4,
+    "type": "Low Pass Filter",
+    "cascade_raw": 0,
+    "option": "no cascade",
+    "extreme_rate": false
+   },
+   {
+    "slot": 5,
+    "type": "Low Pass Filter",
+    "cascade_raw": 0,
+    "option": "no cascade",
+    "extreme_rate": false
+   }
+  ],
+  "banks": {
+   "A": "BiqBank",
+   "B": "BiqBank",
+   "C": "VoiceDelay"
+  },
+  "bank_params": {
+   "A": {
+    "param_raw": 1,
+    "param": "deflate 1",
+    "column_mode_1_raw": 0,
+    "column_mode_2_raw": 0,
+    "biquad_size_raw": 0,
+    "spectral_set_raw": 0,
+    "spectral_set": "Live"
+   },
+   "B": {
+    "param_raw": 0,
+    "param": "deflate 0",
+    "column_mode_1_raw": 0,
+    "column_mode_2_raw": 0,
+    "biquad_size_raw": 0,
+    "spectral_set_raw": 0,
+    "spectral_set": "Live"
+   }
+  },
+  "shape_generators": [
+   {
+    "sg": 1,
+    "type": "Single Cycle"
+   },
+   {
+    "sg": 2,
+    "type": "Continuous Cycle"
+   },
+   {
+    "sg": 3,
+    "type": "Continuous Cycle"
+   },
+   {
+    "sg": 4,
+    "type": "Continuous Cycle"
+   },
+   {
+    "sg": 5,
+    "type": "Continuous Cycle"
+   }
+  ],
+  "recirculator": "Short Reverb",
+  "row_types": {
+   "audio_rows_9_10": "Audio L/R",
+   "submix_rows_11_12": "Submix L/R"
+  },
+  "delay_time_select_raw": 0
+ },
+ "formulas": {
+  "A": {
+   "at": [
+    0,
+    27
+   ],
+   "summary": "[W + X + Y + Z] W = SG1 0.79 x 0.1 [shape Pulse] ; Y = Continuous 0.04->0.0 x 0.1",
+   "decoded": "A"
+  },
+  "C": {
+   "at": [
+    13,
+    32
+   ],
+   "summary": "[W + X + Y + Z] W = SG3 0.25 x 1 [shape Sine] ; Z = Continuous 0.75->0.0 x 1",
+   "decoded": "C"
+  },
+  "D": {
+   "at": [
+    13,
+    55
+   ],
+   "summary": "[W x (X + Y + Z)] W = Constant 0.2 x 10 x Macro (ii) ; Y = Continuous 0.0->0.5 x 1",
+   "decoded": "D"
+  },
+  "E": {
+   "at": [
+    6,
+    1
+   ],
+   "summary": "[W + X + Y + Z] Z = Continuous 0.0->0.6 x 10",
+   "decoded": "E"
+  },
+  "F": {
+   "at": [
+    13,
+    30
+   ],
+   "summary": "[W + X + Y + Z] W = Constant -0.8 x 1 x Macro (iii) ; X = Continuous 0.0->0.09 x 1 ; Y = Continuous 1.0->0.45 x 1 ; Z = Continuous 0.0->0.36 x 1",
+   "decoded": "F"
+  },
+  "G": {
+   "at": [
+    13,
+    53
+   ],
+   "summary": "[W x (X + Y + Z)] W = Constant 1.0 x 1 x Macro (i) ; Z = Continuous 0.01->0.5 x 100",
+   "decoded": "G"
+  },
+  "H": {
+   "at": [
+    13,
+    29
+   ],
+   "summary": "[W + X + Y + Z] Y = Continuous 0.2->0.1 x 10",
+   "decoded": "H"
+  },
+  "W": {
+   "at": [
+    13,
+    52
+   ],
+   "summary": null,
+   "decoded": null
+  },
+  "X": {
+   "at": [
+    13,
+    28
+   ],
+   "summary": null,
+   "decoded": null
+  }
+ },
+ "macros_ch1_cc12_17": {
+  "12": 40,
+  "13": 54,
+  "14": 93,
+  "15": 77,
+  "16": 0,
+  "17": 0
+ },
+ "raw_message_count": 1149,
+ "macros_note": "ch1 cc12-17 as the matRefresh dump reported them AT CAPTURE TIME. These are LIVE values: an external controller on the macro CCs can move them, and a macro position was NOT observed to survive a power cycle. Treat as indicative, not as the stored patch value."
+}

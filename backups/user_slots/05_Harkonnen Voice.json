@@ -1,0 +1,469 @@
+{
+ "slot": 5,
+ "name": "Harkonnen Voice",
+ "firmware": "10.81",
+ "cells": [
+  {
+   "row": 6,
+   "col": 35,
+   "value": "L",
+   "muted": false,
+   "row_name": "Bank A",
+   "col_name": "Bank B col 1 (BiqMouth)"
+  },
+  {
+   "row": 7,
+   "col": 0,
+   "value": ".5",
+   "muted": false,
+   "row_name": "Bank B",
+   "col_name": "Master SL"
+  },
+  {
+   "row": 7,
+   "col": 1,
+   "value": ".5",
+   "muted": false,
+   "row_name": "Bank B",
+   "col_name": "Master SR"
+  },
+  {
+   "row": 13,
+   "col": 27,
+   "value": "z^2",
+   "muted": false,
+   "row_name": "Direct +",
+   "col_name": "Bank A col 1 (WaveBank)"
+  },
+  {
+   "row": 13,
+   "col": 28,
+   "value": "X",
+   "muted": false,
+   "row_name": "Direct +",
+   "col_name": "Bank A col 2 (WaveBank)"
+  },
+  {
+   "row": 13,
+   "col": 29,
+   "value": "X",
+   "muted": false,
+   "row_name": "Direct +",
+   "col_name": "Bank A col 3 (WaveBank)"
+  },
+  {
+   "row": 13,
+   "col": 30,
+   "value": "X",
+   "muted": false,
+   "row_name": "Direct +",
+   "col_name": "Bank A col 4 (WaveBank)"
+  },
+  {
+   "row": 13,
+   "col": 31,
+   "value": "X",
+   "muted": false,
+   "row_name": "Direct +",
+   "col_name": "Bank A col 5 (WaveBank)"
+  },
+  {
+   "row": 13,
+   "col": 51,
+   "value": "K",
+   "muted": false,
+   "row_name": "Direct +",
+   "col_name": "SG 1 F (Hz) / P (phase)"
+  },
+  {
+   "row": 13,
+   "col": 52,
+   "value": "W",
+   "muted": false,
+   "row_name": "Direct +",
+   "col_name": "SG 1 T (trigger) / F2 (dual)"
+  },
+  {
+   "row": 13,
+   "col": 36,
+   "value": "E",
+   "muted": false,
+   "row_name": "Direct +",
+   "col_name": "Bank B col 2 (BiqMouth)"
+  },
+  {
+   "row": 13,
+   "col": 37,
+   "value": "F",
+   "muted": false,
+   "row_name": "Direct +",
+   "col_name": "Bank B col 3 (BiqMouth)"
+  },
+  {
+   "row": 13,
+   "col": 39,
+   "value": "H",
+   "muted": false,
+   "row_name": "Direct +",
+   "col_name": "Bank B col 5 (BiqMouth)"
+  },
+  {
+   "row": 13,
+   "col": 38,
+   "value": "G",
+   "muted": false,
+   "row_name": "Direct +",
+   "col_name": "Bank B col 4 (BiqMouth)"
+  },
+  {
+   "row": 13,
+   "col": 41,
+   "value": "J",
+   "muted": false,
+   "row_name": "Direct +",
+   "col_name": "Bank B col 7 (BiqMouth)"
+  },
+  {
+   "row": 13,
+   "col": 40,
+   "value": "I",
+   "muted": false,
+   "row_name": "Direct +",
+   "col_name": "Bank B col 6 (BiqMouth)"
+  },
+  {
+   "row": 13,
+   "col": 32,
+   "value": "X",
+   "muted": false,
+   "row_name": "Direct +",
+   "col_name": "Bank A col 6 (WaveBank)"
+  },
+  {
+   "row": 13,
+   "col": 53,
+   "value": "M",
+   "muted": false,
+   "row_name": "Direct +",
+   "col_name": "SG 2 F (Hz) / P (phase)"
+  },
+  {
+   "row": 13,
+   "col": 54,
+   "value": "W",
+   "muted": false,
+   "row_name": "Direct +",
+   "col_name": "SG 2 T (trigger) / F2 (dual)"
+  },
+  {
+   "row": 14,
+   "col": 28,
+   "value": "A",
+   "muted": false,
+   "row_name": "Direct + (2)",
+   "col_name": "Bank A col 2 (WaveBank)"
+  },
+  {
+   "row": 14,
+   "col": 29,
+   "value": "B",
+   "muted": false,
+   "row_name": "Direct + (2)",
+   "col_name": "Bank A col 3 (WaveBank)"
+  },
+  {
+   "row": 14,
+   "col": 30,
+   "value": "C",
+   "muted": false,
+   "row_name": "Direct + (2)",
+   "col_name": "Bank A col 4 (WaveBank)"
+  },
+  {
+   "row": 14,
+   "col": 31,
+   "value": "D",
+   "muted": false,
+   "row_name": "Direct + (2)",
+   "col_name": "Bank A col 5 (WaveBank)"
+  },
+  {
+   "row": 15,
+   "col": 28,
+   "value": ".001",
+   "muted": false,
+   "row_name": "Direct -",
+   "col_name": "Bank A col 2 (WaveBank)"
+  },
+  {
+   "row": 15,
+   "col": 29,
+   "value": ".002",
+   "muted": false,
+   "row_name": "Direct -",
+   "col_name": "Bank A col 3 (WaveBank)"
+  },
+  {
+   "row": 15,
+   "col": 30,
+   "value": ".003",
+   "muted": false,
+   "row_name": "Direct -",
+   "col_name": "Bank A col 4 (WaveBank)"
+  },
+  {
+   "row": 15,
+   "col": 31,
+   "value": ".004",
+   "muted": false,
+   "row_name": "Direct -",
+   "col_name": "Bank A col 5 (WaveBank)"
+  },
+  {
+   "row": 16,
+   "col": 32,
+   "value": ".5",
+   "muted": false,
+   "row_name": "Direct x (multiply)",
+   "col_name": "Bank A col 6 (WaveBank)"
+  }
+ ],
+ "setup": {
+  "polyphony": {
+   "base": 8,
+   "expanded_plus": true,
+   "double_computation_rate": false
+  },
+  "bend_range": "96 (all channels)",
+  "master_columns": {
+   "2": "Conv 1 Interp",
+   "3": "Conv 1 Mix",
+   "4": "Recirc R4",
+   "5": "Recirc Mix",
+   "6": "Conv 2 Interp",
+   "7": "Conv 2 Mix"
+  },
+  "oscillators": [
+   {
+    "slot": 1,
+    "type": "DSF Oscillator",
+    "cascade_raw": 0,
+    "option": 0,
+    "extreme_rate": false
+   },
+   {
+    "slot": 2,
+    "type": "DSF Oscillator",
+    "cascade_raw": 0,
+    "option": 0,
+    "extreme_rate": false
+   },
+   {
+    "slot": 3,
+    "type": "DSF Oscillator",
+    "cascade_raw": 0,
+    "option": 0,
+    "extreme_rate": false
+   },
+   {
+    "slot": 4,
+    "type": "Low Pass Filter",
+    "cascade_raw": 0,
+    "option": "no cascade",
+    "extreme_rate": false
+   },
+   {
+    "slot": 5,
+    "type": "Low Pass Filter",
+    "cascade_raw": 0,
+    "option": "no cascade",
+    "extreme_rate": false
+   }
+  ],
+  "banks": {
+   "A": "WaveBank",
+   "B": "BiqMouth",
+   "C": "VoiceDelay"
+  },
+  "bank_params": {
+   "A": {
+    "param_raw": 0,
+    "param": "sawtooth",
+    "column_mode_1_raw": 0,
+    "column_mode_2_raw": 0,
+    "biquad_size_raw": 0,
+    "spectral_set_raw": 0,
+    "spectral_set": "Live"
+   },
+   "B": {
+    "param_raw": 1,
+    "param": "deflate 1",
+    "column_mode_1_raw": 0,
+    "column_mode_2_raw": 0,
+    "biquad_size_raw": 0,
+    "spectral_set_raw": 0,
+    "spectral_set": "Live"
+   }
+  },
+  "shape_generators": [
+   {
+    "sg": 1,
+    "type": "Continuous Cycle"
+   },
+   {
+    "sg": 2,
+    "type": "Continuous Cycle"
+   },
+   {
+    "sg": 3,
+    "type": "Continuous Cycle"
+   },
+   {
+    "sg": 4,
+    "type": "Continuous Cycle"
+   },
+   {
+    "sg": 5,
+    "type": "Continuous Cycle"
+   }
+  ],
+  "recirculator": "Short Reverb",
+  "row_types": {
+   "audio_rows_9_10": "Audio L/R",
+   "submix_rows_11_12": "Submix L/R"
+  },
+  "delay_time_select_raw": 0
+ },
+ "formulas": {
+  "A": {
+   "at": [
+    14,
+    28
+   ],
+   "summary": "[W + X + Y + Z] W = SG1 0.14 x 0.01 [shape Sine]",
+   "decoded": "A"
+  },
+  "B": {
+   "at": [
+    14,
+    29
+   ],
+   "summary": "[W + X + Y + Z] W = SG1 0.15 x 0.01 [shape Sine, phase 0.25]",
+   "decoded": "B"
+  },
+  "C": {
+   "at": [
+    14,
+    30
+   ],
+   "summary": "[W + X + Y + Z] W = SG1 0.13 x 0.01 [shape Sine, phase 0.5]",
+   "decoded": "C"
+  },
+  "D": {
+   "at": [
+    14,
+    31
+   ],
+   "summary": "[W + X + Y + Z] W = SG1 0.11 x 0.01 [shape Sine, phase 0.75]",
+   "decoded": "D"
+  },
+  "E": {
+   "at": [
+    13,
+    36
+   ],
+   "summary": "[W + X + Y + Z] W = Constant 0.23 x 10 ; Y = Continuous 0.0->-0.2 x 1",
+   "decoded": "E"
+  },
+  "F": {
+   "at": [
+    13,
+    37
+   ],
+   "summary": "[W + X + Y + Z] W = Constant 0.03 x 10 ; Y = Continuous 0.5->0.5 x 1",
+   "decoded": "F"
+  },
+  "G": {
+   "at": [
+    13,
+    38
+   ],
+   "summary": "[W + X + Y + Z] W = Constant 1.0 x 1 x Macro (iii)",
+   "decoded": "G"
+  },
+  "H": {
+   "at": [
+    13,
+    39
+   ],
+   "summary": "[W + X + Y + Z] W = Constant 0.2 x 10 x Macro (iv) ; Y = Continuous 0.5->0.5 x 1",
+   "decoded": "H"
+  },
+  "I": {
+   "at": [
+    13,
+    40
+   ],
+   "summary": "[W + X + Y + Z] W = Constant 0.62 x 1 x Macro (v)",
+   "decoded": "I"
+  },
+  "J": {
+   "at": [
+    13,
+    41
+   ],
+   "summary": "[W + X + Y + Z] W = Constant 0.5 x 10 x Macro (vi)",
+   "decoded": "J"
+  },
+  "K": {
+   "at": [
+    13,
+    51
+   ],
+   "summary": "[W + X + Y + Z] Z = Continuous 0.0->0.5 x 10",
+   "decoded": "K"
+  },
+  "L": {
+   "at": [
+    6,
+    35
+   ],
+   "summary": "[W + X + Y + Z] W = SG2 0.12 x 1 [shape Ramp Up] ; Y = Continuous 0.25->0.25 x 1",
+   "decoded": "L"
+  },
+  "M": {
+   "at": [
+    13,
+    53
+   ],
+   "summary": "[W + X + Y + Z] W = Constant 0.3 x 100",
+   "decoded": "M"
+  },
+  "W": {
+   "at": [
+    13,
+    52
+   ],
+   "summary": null,
+   "decoded": null
+  },
+  "X": {
+   "at": [
+    13,
+    28
+   ],
+   "summary": null,
+   "decoded": null
+  }
+ },
+ "macros_ch1_cc12_17": {
+  "12": 0,
+  "13": 0,
+  "14": 26,
+  "15": 46,
+  "16": 13,
+  "17": 20
+ },
+ "raw_message_count": 1181,
+ "macros_note": "ch1 cc12-17 as the matRefresh dump reported them AT CAPTURE TIME. These are LIVE values: an external controller on the macro CCs can move them, and a macro position was NOT observed to survive a power cycle. Treat as indicative, not as the stored patch value."
+}
