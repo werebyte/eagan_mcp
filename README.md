@@ -22,6 +22,18 @@ What that means concretely:
   screen is an allowlist built from `HakenMidi.h`, not a proof.
 - **`cc0=127` is the system-slot path used by firmware updates. This project never sends it.**
   If you extend the code, do not.
+- **Turn your gain down before you let it build anything.** A wrong formula can jump to
+  full-scale output between one note and the next - an output level set to 1.0 instead of 0.1,
+  a feedback path that runs away, a note that never releases. On headphones that is a hearing
+  risk and on a PA it is a speaker risk, and no software guard here prevents it: the matrix
+  is an audio patchbay and the device will do what it is told. The Haken guide says the same
+  thing ("Always turn down your gain / attenuation when experimenting making changes"), and
+  the knowledge base starts every output formula at 0.1 for this reason.
+- **`send_raw` is the one tool that can reach past the guards.** It refuses the system-slot
+  path outright and needs `allow_flash=True` for a store or a device task, but everything else
+  it sends arrives unchanged and unverified. It exists for protocol exploration. If you are not
+  doing that, you do not need it, and an agent should not reach for it to do something a typed
+  tool already does.
 - An agent can be confidently wrong. Read what it proposes before you confirm a store.
 
 If any of that is unacceptable for your instrument, use the read-only half: the knowledge base,
@@ -172,10 +184,12 @@ Four rules the code enforces rather than merely documents:
 
 1. Every matrix and formula write targets the edit slot. `save_to_user_slot` is the only tool
    that persists anything, and it refuses without `confirm=True` plus a named slot.
-2. `cc0=127`, the system-slot store path, is never emitted. User stores are `cc0=0` with
-   `cc32`/`cc112`.
+2. `cc0=127`, the system-slot store path, is never emitted by any tool - including `send_raw`,
+   where not even `allow_flash=True` unlocks it. User stores are `cc0=0` with `cc32`/`cc112`.
 3. `send_preset_file` pre-scans the whole payload and refuses any `ccTask` message before a
-   single MIDI byte is sent.
+   single MIDI byte is sent. `send_raw` applies the same screen to its whole batch, so a flash
+   command hidden mid-batch blocks the messages before it too, and a store or device task needs
+   an explicit `allow_flash=True`.
 4. A store is verified by comparing names through the read-only `list_user_presets`, never by
    loading the slot back - loading destroys the unsaved edit slot.
 

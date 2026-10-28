@@ -142,3 +142,60 @@ def test_prescan_allows_an_edit_buffer_select(tmp_path, spy):
     result = server.send_preset_file(path, delay_ms=0)
     assert result["sent"] == 1
     assert len(spy.sent) == 1
+
+
+# ----------------------------------------------------- the same screen applies to send_raw
+
+def _raw(messages, **kw):
+    """Call send_raw with the module's real connection, whose `send` the spy fixture patches.
+
+    The connection is never opened, so clear() and listen() work on the empty buffer and
+    nothing leaves the process.
+    """
+    return getattr(server.send_raw, "fn", server.send_raw)(messages, listen_seconds=0.0, **kw)
+
+
+def _cc16d(control, value):
+    return {"type": "control_change", "channel": 15, "control": control, "value": value}
+
+
+def test_send_raw_refuses_the_system_slot_path_even_with_allow_flash(monkeypatch, spy):
+    """send_raw is the one tool that could reach past the screen, so it must not.
+
+    README's safety section claims the system-slot store path is never emitted and lists it
+    among the rules the CODE enforces. That claim is only true if send_raw screens it too:
+    `send_preset_file` scanning its payload is no help if a caller can send the same bytes
+    directly. cc0=127 is valid only during an Update File 2 firmware write, so there is no
+    legitimate call for it from here and `allow_flash` must not unlock it.
+    """
+    for allow in (False, True):
+        with pytest.raises(RuntimeError, match="system-slot"):
+            _raw([_cc16d(haken.CC_CATEGORY, 127)], allow_flash=allow)
+        assert not spy.sent, "refused but still sent something"
+
+
+def test_send_raw_refuses_a_store_unless_flash_is_explicitly_allowed(monkeypatch, spy):
+    with pytest.raises(RuntimeError, match="user slot"):
+        _raw([_cc16d(haken.CC_STORE_LO, 4)])
+    assert not spy.sent
+
+    _raw([_cc16d(haken.CC_STORE_LO, 4)], allow_flash=True)
+    assert len(spy.sent) == 1, "allow_flash=True must still be a working escape hatch"
+
+
+def test_send_raw_refuses_the_whole_batch_not_half_of_it(monkeypatch, spy):
+    """A flash message hidden mid-batch must block everything before it, too."""
+    with pytest.raises(RuntimeError):
+        _raw([_cc16d(haken.CC_ROW, 1),
+                                _cc16d(haken.CC_CATEGORY, 127),
+                                _cc16d(haken.CC_COL, 2)])
+    assert not spy.sent, "a batch was half-applied before the refusal"
+
+
+def test_send_raw_still_passes_ordinary_traffic_untouched(monkeypatch, spy):
+    """The negative control: the screen must not make send_raw useless for exploration."""
+    out = _raw(
+               [_cc16d(haken.CC_ROW, 3), _cc16d(haken.CC_COL, 13),
+                {"type": "note_on", "channel": 0, "note": 60, "velocity": 80}])
+    assert out["sent"] == 3
+    assert len(spy.sent) == 3, "ordinary matrix and note traffic must reach the device"

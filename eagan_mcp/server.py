@@ -94,22 +94,50 @@ def disconnect() -> str:
 
 
 @mcp.tool()
-def send_raw(messages: list[dict], listen_seconds: float = 0.5) -> dict:
-    """Send mido-dict messages, then collect replies. Unguarded: whatever you
-    pass reaches the device, including flash writes. Channels are 0-based
-    (ch16 = 15). For exploration only.
-    Never send ch16 cc112 (ccStore, HakenMidi.h:475) without the user naming
-    the slot first - it writes the preset to flash, and with ch16 cc0=0 plus
-    cc32 it overwrites a user slot.
-    Never send ch16 cc0=127 at all: that is the system-slot path, valid only
-    during an Update File 2 firmware write; it overwrites a factory preset.
-    Never send ch16 cc109=8 (global settings to flash) without explicit user
-    confirmation."""
+def send_raw(messages: list[dict], listen_seconds: float = 0.5,
+             allow_flash: bool = False) -> dict:
+    """Send mido-dict messages, then collect replies. Largely unguarded: anything
+    not named below reaches the device unchanged. Channels are 0-based (ch16 = 15),
+    and this is for protocol exploration only.
+
+    Being raw, it is the one tool that can put the device in a state no other
+    tool can produce. Use it to explore, not to build - the typed tools verify
+    their writes against a separate read and this one cannot.
+
+    Two screens, applied to the WHOLE batch before any message is sent:
+      - ch16 cc0=127, the system-slot store path, is refused ALWAYS, even with
+        allow_flash=True. It is valid only during an Update File 2 firmware
+        write and would overwrite a factory preset.
+      - a user-slot store (ch16 cc112), and any ch16 cc109 device task - cc109=8
+        writes the global settings to flash, and about fifteen other task values
+        write or erase it - are refused unless you pass allow_flash=True, which
+        you may only do after the user has asked for that specific operation in
+        that turn.
+
+    A refusal sends nothing at all and names the offending message, so a batch
+    is never half-applied."""
+    msgs = [midi_io.dict_to_msg(d) for d in messages]
+    for i, m in enumerate(msgs):
+        reason = _flash_write_reason(m)
+        if not reason:
+            continue
+        system_slot = (m.type == "control_change" and m.channel == haken.CH16
+                       and m.control == haken.CC_CATEGORY and m.value == 127)
+        if system_slot:
+            raise RuntimeError(
+                f"refused, nothing sent: message {i} is {reason}. This is never sent by this "
+                "server under any circumstances.")
+        if not allow_flash:
+            raise RuntimeError(
+                f"refused, nothing sent: message {i} is {reason}. If the user asked for exactly "
+                "this, call again with allow_flash=True; to store a preset use save_to_user_slot, "
+                "which verifies the result.")
     conn.clear()
-    for d in messages:
-        conn.send(midi_io.dict_to_msg(d))
+    for m in msgs:
+        conn.send(m)
     replies = conn.listen(listen_seconds)
-    return {"sent": len(messages), "replies": [midi_io.msg_to_dict(m) for _, m in replies]}
+    return {"sent": len(msgs), "replies": [midi_io.msg_to_dict(m) for _, m in replies],
+            "flash_allowed": allow_flash}
 
 
 @mcp.tool()
