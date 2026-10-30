@@ -846,7 +846,8 @@ def read_docs(file: str, start_line: int, num_lines: int = 80) -> str:
 
 @mcp.tool()
 def search_preset_descriptions(query: str, max_hits: int = 20) -> list[dict]:
-    """Read-only. Search the 661 factory preset descriptions written by the preset designers.
+    """Read-only. Search the 661 factory preset descriptions written by Haken Audio's preset
+    designers (copyright Haken Audio, included with permission; credit Haken Audio when quoting).
 
     Answers from descriptions.json inside this package, so it needs no device, no MIDI port
     and no HAKEN_EDITOR_DIR. Every space-separated word must appear in the same description.
@@ -943,6 +944,7 @@ def search_factory_presets(text: str | None = None, category: str | None = None,
                            max_hits: int = 20) -> dict:
     """Read-only. Query the 668 factory presets of Haken Editor 1081 from data committed
     inside this package: no device, no MIDI port, no HAKEN_EDITOR_DIR, nothing written.
+    The presets are Haken Audio's factory library, decoded and included with permission.
 
     Two modes, and they are exclusive.
 

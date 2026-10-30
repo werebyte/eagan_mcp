@@ -22,10 +22,10 @@ SOFTWARE.
 
 --------------------------------------------------------------------------
 
-Third-party material: two carve-outs
+Third-party material: three carve-outs
 
 The MIT grant above covers this project's own source. It does not and cannot
-cover the two bodies of third-party material below. Both are recorded here so
+cover the three bodies of third-party material below. Both are recorded here so
 that the limits are visible before anything is ported or published.
 
 Carve-out 1 -- cohem's documentation is not MIT.
@@ -64,3 +64,19 @@ in all three copies: fine privately, a blocker if this repo is ever published.
   publishing this repository with them in it, is a blocker and needs Lippold
   Haken's permission first. .gitignore already excludes docs/ and ref/, which
   keeps the copies untracked but does not resolve the question.
+
+Carve-out 3 -- the factory preset data belongs to Haken Audio and is
+included with permission.
+
+  eagan_mcp/knowledge/descriptions.json holds the 661 factory preset
+  descriptions from the Haken Editor (Firmware/Descriptions), verbatim.
+  factory_catalog.json, census.json and preset_index_1081.json are decoded
+  from the Haken factory preset files and record their names, categories and
+  structure. The factory presets and their descriptions are the work of
+  Haken Audio, with Edmund Eagan as primary sound designer of the
+  EaganMatrix system preset library, and remain Haken Audio's copyright.
+
+  They are included with the permission of Edmund Eagan of Haken Audio,
+  given on 2026-10-30, with the request that Haken Audio be credited. The
+  MIT grant above does not extend to these files. If you want to reuse them
+  outside this project, ask Haken Audio.

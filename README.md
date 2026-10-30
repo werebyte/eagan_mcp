@@ -78,6 +78,21 @@ including the whole knowledge base and factory catalog, works from a plain `pip 
   `search_docs` / `read_docs` (the guides in `docs/`; **checkout only**, not in the wheel),
   `search_preset_descriptions` (the 661 factory preset descriptions, from shipped JSON)
 
+## Credits
+
+The EaganMatrix, its factory preset library and the preset descriptions are the work of
+**Haken Audio** (https://www.hakenaudio.com). The 661 preset descriptions shipped in
+`eagan_mcp/knowledge/descriptions.json`, and the factory catalog decoded from Haken's preset
+files, are included with the kind permission of Edmund Eagan of Haken Audio and remain
+Haken Audio's copyright. They are not covered by this project's MIT licence; see the
+carve-outs at the end of `LICENSE`.
+
+The wire protocol is implemented from Lippold Haken's `HakenMidi.h`, which ships with the Haken
+Editor and is not redistributed here. The preset-file decoding draws on pachde's cohem and
+CHEM projects (Paul Chase Dempsey).
+
+This project is not affiliated with or endorsed by Haken Audio.
+
 ## Requirements
 
 - **Python 3.11 or 3.12.** Not 3.13: `python-rtmidi` ships compiled wheels and 3.13 is not

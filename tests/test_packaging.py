@@ -164,3 +164,24 @@ def test_no_shipped_file_carries_a_developer_path(tmp_path):
     assert not offenders, (
         "shipped files carry a developer-specific path: " + "; ".join(offenders) +
         ". Use an environment variable with no default and an error that names it")
+
+
+def test_haken_audio_is_credited_for_the_shipped_factory_data():
+    """Haken Audio's permission (Edmund Eagan, 2026-10-30) came with one request: credit them.
+
+    The credit lives in three places a user or an agent will actually meet: the LICENSE
+    carve-out that keeps the data out of the MIT grant, the README, and the docstrings of the
+    two tools that serve the data. Losing any of them silently breaks the condition.
+    """
+    licence = (REPO / "LICENSE").read_text(encoding="utf-8")
+    assert "Carve-out 3" in licence and "Haken Audio" in licence
+    assert "descriptions.json" in licence and "permission" in licence
+    assert "MIT grant above does not extend to these files" in licence
+
+    readme = (REPO / "README.md").read_text(encoding="utf-8")
+    assert "## Credits" in readme and "Haken Audio" in readme
+
+    from eagan_mcp import server
+    for tool in (server.search_preset_descriptions, server.search_factory_presets):
+        doc = getattr(tool, "fn", tool).__doc__
+        assert "Haken Audio" in doc and "permission" in doc, tool
